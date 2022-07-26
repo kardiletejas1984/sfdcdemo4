@@ -24,6 +24,4 @@ jobs:
             source_branch: DEV
             target_branch: master
             title: Automated pull request
-            template: .github/PULL_REQUEST_TEMPLATE.md
-            body: "**Automated pull request**"                           
             get_diff: true         
