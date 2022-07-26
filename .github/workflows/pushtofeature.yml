@@ -16,11 +16,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run the Action
-        if: startsWith(github.ref, 'refs/heads/https---github.com-kardiletejas1984-DevOps')
         uses: devops-infra/action-pull-request@v0.4.2
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_SCOPED_TOKEN }}
         with:
             github_token: ${{ secrets.REPO_SCOPED_TOKEN }}
-            title: Automatic pull request                           
+            source_branch: DEV
+            target_branch: master
+            title: Automated pull request
             get_diff: true         
